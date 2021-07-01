@@ -4,6 +4,19 @@ O arquivo docker-compose.yml que disponibilizamos em nosso Github, foi configura
 
 Ao executar o comando docker-compose up, o Docker irá subir de forma automática os containers do Zabbix, do Grafana e do MySQL. Além disso, o Zabbix já estará conectado ao banco de dados MySQL e o Grafana já estará com o plugin do Zabbix instalado.
 
+Entre com  user root:
+
+sudo su
+
 Executar o seguinte comando na pasta que esta localizado o arquivo docker-compose.yml para suber os containers:
 
 docker-compose up -d
+
+Para  pegar informações de acesso como: url e porta  do zabbix e grafana execute o seguinte comando:
+
+docker ps
+
+Caso  necessite de reiniciar os  container . É muito simples: use o comando:
+
+docker-compose restart worker
+
